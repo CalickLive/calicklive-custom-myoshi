@@ -234,14 +234,14 @@ a[style="font-weight: 600; font-size: 10px; color: var(--glow-pink);"] {
     background: rgba(0, 0, 6, 0.5) !important;
     border-radius: 5px !important;
     transform: translateY(0px) !important;
-    box-shadow: rgba(198, 0, 0, 0.2) 0px 0px 20px;
-    transition: border 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-    backdrop-filter: blur(10px);
-    justify-content: center;
-    flex-grow: 1;
-    margin-left: 5px;
-    margin-right: 5px;
-    transition: all 0.5s ease;
+    box-shadow: rgba(198, 0, 0, 0.2) 0px 0px 20px !important;
+    transition: border 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease !important;
+    backdrop-filter: blur(10px) !important;
+    justify-content: center !important;
+    flex-grow: 1 !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    transition: all 0.5s ease !important;
 }
 
 .contact-link:not([style="opacity: 0.6; cursor: default;"]):hover,
@@ -250,7 +250,7 @@ a[style="font-weight: 600; font-size: 10px; color: var(--glow-pink);"] {
     color: white !important;
     transform: translateY(-1px) !important;
     box-shadow: var(--red-color) 0px 0px 10px !important;
-    justify-content: center;
+    justify-content: center !important;
     background-color: var(--red-color) !important;
 }
 
