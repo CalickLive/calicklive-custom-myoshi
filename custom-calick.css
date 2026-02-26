@@ -300,6 +300,10 @@ a[style="font-weight: 600; font-size: 10px; color: var(--glow-pink);"] {
     margin: 0px;
 }
 
+.theme-dark a {
+    color: grey !important;
+}
+
 @keyframes test {
     0% {}
 
