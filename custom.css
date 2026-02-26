@@ -136,7 +136,7 @@ div[style="position: relative; background: var(--vs-bg-white); border-left: 1px 
 }
 
 .card-header {
-    background: linear-gradient(150deg, rgba(86, 0, 0, 0.7) 0%, rgba(25, 0, 0, 0.7) 70%);
+    background: linear-gradient(150deg, rgba(86, 0, 0, 0.7) 0%, rgba(25, 0, 0, 0.7) 70%) !important;
     border-bottom-left-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
     border-top-right-radius: 3px !important;
