@@ -1,0 +1,307 @@
+.escape {
+    color: black;
+    font-size: 100px;
+    position: fixed !important;
+    left: 0%;
+    top: 0%;
+    display: flex !important;
+}
+
+.behind {
+    z-index: -1 !important;
+}
+
+.profile-left {
+    z-index: 1 !important;
+}
+
+.profile-custom-html {
+    overflow: visible;
+}
+
+.card-body {
+    overflow: visible;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.card {
+    overflow: visible;
+}
+
+.add-comment,
+.profile-comment,
+.profile-comment:nth-child(2n),
+.section-links {
+    border-color: var(--grey-border-color);
+    background: linear-gradient(130deg, rgba(198, 0, 0, 0.1) 0%, var(--card-background-color) 80%, rgba(0, 0, 0, 0.8) 100%) !important;
+}
+
+div[aria-placeholder="Leave a comment for CalickLive..."],
+div[style="position: relative; background: var(--vs-bg-white); border-left: 1px solid var(--vs-border); border-right: 1px solid var(--vs-border); border-bottom: 1px solid var(--vs-border); border-top: 1px solid var(--vs-border); opacity: 1;"] {
+    background: rgba(25, 25, 25, 0.2) !important;
+    color: white;
+    border-color: #353535 !important;
+    border-width: 1px !important;
+    border-radius: 5px !important;
+    transition: border-color 0.5s ease;
+}
+
+div[style="margin-top:8px;margin-left:10px;padding:8px 10px;background:var(--soft-pink);border-left:2px solid var(--vs-pink);border-radius:0 4px 4px 0"] {
+    margin-top: 8px !important;
+    margin-left: 10px !important;
+    padding: 8px 10px !important;
+    background: rgba(25, 25, 25, 0.2) !important;
+    border-radius: 5px !important;
+    border-left: 1px solid var(--grey-border-color) !important;
+    border-top: 1px solid var(--grey-border-color) !important;
+    border-right: 1px solid var(--grey-border-color) !important;
+    border-bottom: 1px solid var(--grey-border-color) !important;
+}
+
+div[aria-placeholder="Leave a comment for CalickLive..."]:focus,
+div[style="margin-top:8px;margin-left:10px;padding:8px 10px;background:var(--soft-pink);border-left:2px solid var(--vs-pink);border-radius:0 4px 4px 0"]:focus,
+div[style="position: relative; background: var(--vs-bg-white); border-left: 1px solid var(--vs-border); border-right: 1px solid var(--vs-border); border-bottom: 1px solid var(--vs-border); border-top: 1px solid var(--vs-border); opacity: 1;"]:focus {
+    border-color: white !important;
+}
+
+div[aria-placeholder="Leave a comment for CalickLive..."]:hover,
+div[style="position: relative; background: var(--vs-bg-white); border-left: 1px solid var(--vs-border); border-right: 1px solid var(--vs-border); border-bottom: 1px solid var(--vs-border); border-top: 1px solid var(--vs-border); opacity: 1;"]:hover {
+    border-color: white !important;
+}
+
+div[style="position: relative; background: var(--vs-bg-white); border-left: 1px solid var(--vs-border); border-right: 1px solid var(--vs-border); border-bottom: 1px solid var(--vs-border); border-top: 1px solid var(--vs-border); opacity: 1;"] {
+    border-width: 0px !important;
+}
+
+.profile-comment {
+    border-radius: 5px;
+    border-color: var(--grey-border-color) !important;
+}
+
+.profile-page {
+    position: relative !important;
+    z-index: 0 !important;
+    zoom: 125% !important;
+    --card-background-color: rgba(0, 0, 6, 0.5);
+    --red-color: #C60000;
+    --red-border-color: #441313;
+    --grey-border-color: #353535;
+}
+
+.container {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.profile-page {
+    background-color: black !important;
+    font-family: "Source Code Pro", monospace !important;
+    font-style: normal !important;
+}
+
+.background-img {
+    height: 100%;
+    width: 100%;
+    transform: scale(1.05);
+    object-fit: cover;
+    position: fixed !important;
+    filter: blur(10px) brightness(25%) !important;
+
+    transition: filter 2s ease, transform 10s ease;
+    pointer-events: none;
+}
+
+.card {
+    border-color: var(--red-border-color) !important;
+    border-width: 2px !important;
+    background: linear-gradient(130deg, rgba(198, 0, 0, 0.1) 0%, var(--card-background-color) 80%, rgba(0, 0, 0, 0.8) 100%) !important;
+    border-radius: 5px !important;
+    bottom: 0px !important;
+    box-shadow: var(--red-color) 0px 0px 0px;
+    transition: border 0.25s ease, bottom 0.6s ease, box-shadow 0.25s ease;
+}
+
+.card:hover:not(.nohover) {
+    border-color: var(--red-color) !important;
+    border-radius: 5px !important;
+    bottom: 5px !important;
+    box-shadow: var(--red-color) 0px 0px 25px;
+}
+
+.profile-top-bar {
+    border-color: #111111 !important;
+    border-radius: 5px;
+    background: rgba(0, 0, 6, 0.25) !important;
+}
+
+.card-header {
+    background: linear-gradient(150deg, rgba(86, 0, 0, 0.7) 0%, rgba(25, 0, 0, 0.7) 70%);
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-top-right-radius: 3px !important;
+    border-top-left-radius: 3px !important;
+}
+
+.card-header:after {
+    display: none !important;
+}
+
+.section-links {
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
+.profile-display-name {
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+    color: #EF0000;
+    text-shadow: #EF0000 0px 0px 10px;
+}
+
+.profile-avatar {
+    width: 150px !important;
+    height: 150px !important;
+    border-color: var(--red-color);
+    border-width: 3px;
+    border-radius: 100px;
+    box-shadow: rgba(198, 0, 0, 1) 0px 0px 40px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, border-radius 1.5s ease, width 0.5s ease, height 0.5s ease, filter 0.5s ease;
+}
+
+.profile-avatar:hover {
+    width: 200px !important;
+    height: 200px !important;
+    filter: brightness(130%) !important;
+    box-shadow: var(--red-color) 0px 0px 40px;
+    border-radius: 15px;
+}
+
+.profile-avatar:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    box-shadow: white 0px 0px 50px;
+}
+
+.comment-body {
+    color: #CECECE;
+}
+
+a:not(.comment-author-name):not(.contact-link):not(.social-link-item) {
+    color: var(--red-color) !important;
+}
+
+a[style="font-weight: 600; font-size: 10px; color: var(--glow-pink);"] {
+    color: var(--red-color) !important;
+}
+
+.comment-author-name:not(:has([href="/calicklive"])) {
+    color: #C14343 !important;
+}
+
+.comment-author-name[href="/calicklive"] {
+    color: var(--red-color) !important;
+}
+
+.profile-url-box {
+    background-color: #440000 !important;
+    border-color: #7A2222 !important;
+    color: grey !important;
+    opacity: 50%;
+}
+
+.profile-username {
+    color: var(--red-color) !important;
+    font-size: 13px !important;
+    opacity: 90% !important;
+}
+
+.profile-mood {
+    background-color: #440000 !important;
+    border-color: #7A2222 !important;
+    color: white !important;
+}
+
+.mood-text {
+    color: white !important;
+}
+
+.contact-link,
+.social-link-item,
+.action-btn {
+    border-color: #7A2222 !important;
+    color: grey !important;
+    background: rgba(0, 0, 6, 0.5) !important;
+    border-radius: 5px !important;
+    transform: translateY(0px) !important;
+    box-shadow: rgba(198, 0, 0, 0.2) 0px 0px 20px;
+    transition: border 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    flex-grow: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: all 0.5s ease;
+}
+
+.contact-link:not([style="opacity: 0.6; cursor: default;"]):hover,
+.social-link-item:hover,
+.action-btn:hover {
+    color: white !important;
+    transform: translateY(-1px) !important;
+    box-shadow: var(--red-color) 0px 0px 10px !important;
+    justify-content: center;
+    background-color: var(--red-color) !important;
+}
+
+.boop-link:not([style="opacity: 0.6; cursor: default;"]) {
+    content: "";
+    color: rgba(0, 0, 0, 0) !important;
+}
+
+.boop-link {
+    flex-grow: 1;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.boop-link:not([style="opacity: 0.6; cursor: default;"]):hover {
+    content: "";
+    color: rgba(0, 0, 0, 0) !important;
+}
+
+.boop-link:not([style="opacity: 0.6; cursor: default;"]):after {
+    content: "👉 BOOP MEEE RAAAAGH!";
+    position: absolute;
+    color: grey !important;
+}
+
+.boop-link:not([style="opacity: 0.6; cursor: default;"]):hover:after {
+    color: white !important;
+}
+
+.boop-stats {
+    color: var(--vs-text-medium);
+}
+
+.stats-table td {
+    border-color: var(--grey-border-color);
+}
+
+.social-links-list {
+    flex-direction: row !important;
+}
+
+.social-link-item {
+    background: var(--card-background-color) !important;
+    gap: 0 !important;
+    flex-grow: 1 !important;
+    justify-content: center !important;
+    margin: 0px;
+}
+
+@keyframes test {
+    0% {}
+
+    100% {}
+}
