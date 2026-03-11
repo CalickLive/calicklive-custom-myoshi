@@ -37,16 +37,17 @@
     background: linear-gradient(130deg, rgba(198, 0, 0, 0.1) 0%, var(--card-background-color) 80%, rgba(0, 0, 0, 0.8) 100%) !important;
 }
 
-div[aria-placeholder="Leave a comment for CalickLive..."],
-div[style="position: relative; background: var(--vs-bg-white); border-left: 1px solid var(--vs-border); border-right: 1px solid var(--vs-border); border-bottom: 1px solid var(--vs-border); border-top: 1px solid var(--vs-border); opacity: 1;"] {
+.add-comment [contenteditable="true"],
+div[style="position: relative; overflow: hidden; background: var(--vs-bg-white); border-left: 1px solid var(--vs-border); border-right: 1px solid var(--vs-border); border-bottom: 1px solid var(--vs-border); border-top: 1px solid var(--vs-border); opacity: 1;"] {
     background: rgba(25, 25, 25, 0.2) !important;
-    color: white;
+    color: white !important;
     border-color: #353535 !important;
     border-width: 1px !important;
     border-radius: 5px !important;
-    transition: border-color 0.5s ease;
+    transition: border-color 0.5s ease !important;
 }
 
+div[style="margin-top: 8px; margin-left: 10px; padding: 8px 10px; background: var(--soft-pink); border-left: 2px solid var(--vs-pink); border-radius: 0px 4px 4px 0px;"],
 div[style="margin-top:8px;margin-left:10px;padding:8px 10px;background:var(--soft-pink);border-left:2px solid var(--vs-pink);border-radius:0 4px 4px 0"] {
     margin-top: 8px !important;
     margin-left: 10px !important;
@@ -60,13 +61,12 @@ div[style="margin-top:8px;margin-left:10px;padding:8px 10px;background:var(--sof
 }
 
 div[aria-placeholder="Leave a comment for CalickLive..."]:focus,
-div[style="margin-top:8px;margin-left:10px;padding:8px 10px;background:var(--soft-pink);border-left:2px solid var(--vs-pink);border-radius:0 4px 4px 0"]:focus,
-div[style="position: relative; background: var(--vs-bg-white); border-left: 1px solid var(--vs-border); border-right: 1px solid var(--vs-border); border-bottom: 1px solid var(--vs-border); border-top: 1px solid var(--vs-border); opacity: 1;"]:focus {
+div[style="position: relative; overflow: hidden; background: var(--vs-bg-white); border-left: 1px solid var(--vs-border); border-right: 1px solid var(--vs-border); border-bottom: 1px solid var(--vs-border); border-top: 1px solid var(--vs-border); opacity: 1;"]:focus {
     border-color: white !important;
 }
 
 div[aria-placeholder="Leave a comment for CalickLive..."]:hover,
-div[style="position: relative; background: var(--vs-bg-white); border-left: 1px solid var(--vs-border); border-right: 1px solid var(--vs-border); border-bottom: 1px solid var(--vs-border); border-top: 1px solid var(--vs-border); opacity: 1;"]:hover {
+div[style="position: relative; overflow: hidden; background: var(--vs-bg-white); border-left: 1px solid var(--vs-border); border-right: 1px solid var(--vs-border); border-bottom: 1px solid var(--vs-border); border-top: 1px solid var(--vs-border); opacity: 1;"]:hover {
     border-color: white !important;
 }
 
@@ -77,6 +77,18 @@ div[style="position: relative; background: var(--vs-bg-white); border-left: 1px 
 .profile-comment {
     border-radius: 5px;
     border-color: var(--grey-border-color) !important;
+    transition: all 0.25s ease;
+}
+
+.profile-comment:hover {
+   background-color: rgba(25, 25, 25, 0.8) !important;
+   border-color: white !important;
+   border-left: 1px solid white !important;
+   border-top: 1px solid white !important;
+   border-right: 1px solid white !important;
+   border-bottom: 1px solid white !important;
+   box-shadow: black 0px 0px 10px;
+   transform: perspective(550px) translateZ(25px);
 }
 
 .profile-page {
@@ -85,7 +97,7 @@ div[style="position: relative; background: var(--vs-bg-white); border-left: 1px 
     zoom: 125% !important;
     --card-background-color: rgba(0, 0, 6, 0.5);
     --red-color: #C60000;
-    --red-border-color: #441313;
+    --red-border-color: #8E1B1B;
     --grey-border-color: #353535;
 }
 
@@ -113,20 +125,31 @@ div[style="position: relative; background: var(--vs-bg-white); border-left: 1px 
 }
 
 .card {
+    color: white !important;
     border-color: var(--red-border-color) !important;
     border-width: 2px !important;
-    background: linear-gradient(130deg, rgba(198, 0, 0, 0.1) 0%, var(--card-background-color) 80%, rgba(0, 0, 0, 0.8) 100%) !important;
+    background: linear-gradient(130deg, rgba(50, 0, 0, 0.5) 0%, var(--card-background-color) 80%, rgba(0, 0, 0, 0.5) 100%) !important;
     border-radius: 5px !important;
     bottom: 0px !important;
     box-shadow: var(--red-color) 0px 0px 0px;
-    transition: border 0.25s ease, bottom 0.6s ease, box-shadow 0.25s ease;
+    transition: border 0.25s ease, bottom 0.6s ease, box-shadow 0.25s ease, transform 0.6s ease, filter 0.6s ease, margin-bottom 0.25s ease;
 }
 
 .card:hover:not(.nohover) {
     border-color: var(--red-color) !important;
     border-radius: 5px !important;
     bottom: 5px !important;
+    margin-bottom: 20px !important;
     box-shadow: var(--red-color) 0px 0px 25px;
+    filter: brightness(110%);
+    z-index: 100;
+}
+
+.profile-left .card:not(.nohover):hover {
+    transform: scale(1.05) perspective(100px) rotateX(1deg);
+}
+.profile-right .card:not(.nohover):hover {
+    transform: scale(1.03) perspective(120px) rotateX(1deg);
 }
 
 .profile-top-bar {
@@ -150,12 +173,86 @@ div[style="position: relative; background: var(--vs-bg-white); border-left: 1px 
 .section-links {
     border-bottom-right-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
+    padding: 0px !important;
+    gap: unset;
 }
 
 .profile-display-name {
     transition: color 0.5s ease, text-shadow 0.5s ease;
     color: #EF0000;
     text-shadow: #EF0000 0px 0px 10px;
+    animation: glitch-1 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes glitch-1 {
+ 0% {
+    transform: skewX(0deg) scaleY(1);
+ }
+
+ 5% {
+ transform: skewX(0deg) scaleY(1);
+ }
+ 11% {
+ transform: skewX(-30deg) scaleY(1.02);
+ }
+ 12% {
+ transform: skewX(0deg) scaleY(1);
+ }
+
+ 20% {
+ transform: skewX(0deg) scaleY(1);
+ }
+ 21% {
+ transform: skewX(-50deg) scaleY(1.01);
+ }
+ 22% {
+ transform: skewX(0deg) scaleY(1);
+ }
+
+ 50% {
+ transform: skewX(0deg) scaleY(1);
+ }
+ 51% {
+ transform: skewX(50deg) scaleY(1.01);
+ }
+ 52% {
+ transform: skewX(0) scaleY(1);
+ }
+
+ 60% {
+ transform: skewX(0deg) scaleY(1);
+ }
+ 61% {
+ transform: skewX(30deg) scaleY(1.05);
+ }
+ 62% {
+ transform: skewX(0deg) scaleY(1);
+ }
+
+ 65% {
+ transform: skewX(0deg) scaleY(1);
+ }
+ 66% {
+ transform: skewX(-80deg) scaleY(1.01);
+ }
+ 67% {
+ transform: skewX(0deg) scaleY(1);
+ }
+
+ 90% {
+ transform: skewX(0deg) scaleY(1);
+ }
+ 91% {
+ transform: skewX(80deg) scaleY(1.01);
+ }
+ 92% {
+ transform: skewX(0) scaleY(1);
+ }
+
+ 100%{
+  transform: skewX(0deg) scaleY(1);
+ }
 }
 
 .profile-avatar {
@@ -165,15 +262,18 @@ div[style="position: relative; background: var(--vs-bg-white); border-left: 1px 
     border-width: 3px;
     border-radius: 100px;
     box-shadow: rgba(198, 0, 0, 1) 0px 0px 40px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease, border-radius 1.5s ease, width 0.5s ease, height 0.5s ease, filter 0.5s ease;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, border-radius 0.75s ease, width 0.5s ease, height 0.5s ease, filter 0.5s ease, margin-bottom 0.5s ease;
 }
 
 .profile-avatar:hover {
-    width: 200px !important;
-    height: 200px !important;
-    filter: brightness(130%) !important;
+    width: 170px !important;
+    height: 170px !important;
+    margin-bottom: 20px; !important
+    filter: brightness(110%) !important;
     box-shadow: var(--red-color) 0px 0px 40px;
     border-radius: 15px;
+    transform-style: preserve-3d;
+    transform: scale(0.94) perspective(550px) translateZ(100px) rotateX(10deg);
 }
 
 .profile-avatar:after {
@@ -220,6 +320,7 @@ a[style="font-weight: 600; font-size: 10px; color: var(--glow-pink);"] {
     background-color: #440000 !important;
     border-color: #7A2222 !important;
     color: white !important;
+    z-index: 100;
 }
 
 .mood-text {
@@ -289,15 +390,16 @@ a[style="font-weight: 600; font-size: 10px; color: var(--glow-pink);"] {
 }
 
 .social-links-list {
+    display: flex !important;
     flex-direction: row !important;
 }
 
 .social-link-item {
+    font-size: 10px;
     background: var(--card-background-color) !important;
-    gap: 0 !important;
-    flex-grow: 1 !important;
+    flex: 1 !important;
     justify-content: center !important;
-    margin: 0px;
+    margin: 0px !important;
 }
 
 .theme-dark a {
@@ -308,8 +410,82 @@ a[style="font-weight: 600; font-size: 10px; color: var(--glow-pink);"] {
     color: white !important;
 }
 
-@keyframes test {
-    0% {}
+.hearted:before {
+ display: none;
+}
 
-    100% {}
+.starred:before {
+ display: none;
+}
+
+.friend-avatar {
+ border-radius: 5px;
+ transition: all 0.25s ease;
+}
+
+.friend-avatar:hover {
+ transform: scale(1.06);
+ box-shadow: red 0px 0px 10px;
+}
+
+.section-links > a {
+ height: 100%;
+ margin: 0px !important;
+ padding: 5px !important;
+ text-decoration: none;
+ transition: all 0.5s ease;
+}
+
+.section-links > a:hover {
+ background-color: rgba(155, 0, 0, 0.25);
+ height: 100%;
+ margin: 0px !important;
+ padding: 5px !important;
+}
+
+a[style="display: flex; flex-direction: column; aspect-ratio: 1 / 1; overflow: hidden; border: 1px solid var(--vs-border); background: var(--vs-bg-white); transition: 0.2s;"] {
+ border-radius: 5px;
+ background-color: var(--card-background-color) !important;
+ border-color: var(--red-border-color) !important;
+ transition: all 0.5s ease;
+}
+
+a[style="display: flex; flex-direction: column; aspect-ratio: 1 / 1; overflow: hidden; border: 1px solid var(--vs-border); background: var(--vs-bg-white); transition: 0.2s;"]:hover{
+  transform: scale(1.06);
+  border-color: red !important;
+  box-shadow: red 0px 0px 10px;
+ }
+
+.profile-left > .card:nth-child(2) > .card-header {
+ display: flex !important;
+ justify-content: left !important;
+ align-items: left !important;
+}
+
+.profile-left > .card:nth-child(2) > .card-header > span {
+ content: "" !important;
+ color: rgba(0, 0, 0, 0) !important;
+}
+
+.profile-left > .card:nth-child(2) > .card-header > span:after {
+ content: "CalickLive's GOATS" !important;
+ position: absolute;
+ color: white !important;
+ margin-left: 10px;
+ left: 0%;
+}
+
+[aria-label="emote"] {
+ content: "🤑" !important;
+ color: rgba(0, 0, 0, 0) !important;
+ transition: all 0.5s ease;
+}
+
+[aria-label="emote"]:after {
+ content: "🤑" !important;
+ color: white !important;
+}
+
+.emote-editor-paragraph {
+ color: white !important;
 }
